@@ -3,93 +3,213 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 		<title></title>
-	</head>
-	<link rel="stylesheet" href="css/mui.min.css" />
-	<link rel="stylesheet" href="css/my.css" />
-	<style>
-		.sub_index_head_message {
-			text-align: center;
-			font-size: 14px;
-			padding: 6px;
-			box-shadow: 0px 2px 10px 2px #D5D5D5;
-		}
-		
-		.order_list_div {
-			padding: 18px;
-		}
-		
-		.order_list_ul {
-			display: flex;
-			flex-direction: column;
-			box-shadow:  0px 2px 10px 2px #D5D5D5;
-		}
-		
-		.order_list_ul>li {
-			display: block;
-			flex: 1;
-			font-size: 12px;
-			padding: 8px;
-			background-image: linear-gradient(to right, #ccc 0%, #ccc 50%, transparent 50%);
-            background-size: 8px 1px;
-            background-repeat: repeat-x;
-            background-position: left bottom;
-		}
-		.order_list_ul>li>dl>dd {
-			font-weight: bold;
-		}
-	</style>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<style>
+			/* containter.header */
+			
+			body>div.containter>header>ul.ul-btn-select {
+				display: flex;
+				margin: 0px;
+				padding: 10px;
+			}
+			
+			body>div.containter>header>ul.ul-btn-select>li {
+				flex: 1;
+				display: block;
+				text-align: center;
+				color: #666666;
+				border: 1px solid #C9C9C9;
+				padding: 3px;
+				margin: 0px 3px;
+				border-radius: 5px;
+				font-size: 14px;
+			}
+			/* body > div.bottom-field */
+			
+			body>div.bottom-field>ul.bottom-field-ul {
+				margin: 0px;
+				padding: 0px;
+				display: flex;
+				color: #666666;
+			}
+			
+			body>div.bottom-field>ul.bottom-field-ul>li {
+				flex: 1;
+				font-size: 14px;
+				display: block;
+			}
+			
+			#qing-kong {
+				border: 1px solid #CD0606;
+				color: #CD0606;
+			}
+			
+			.order-list-paper-ul{
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				min-height: 130px;
+			}
+			.order-list-paper-ul > li {
+				height: 54px;
+				display: block;
+				padding: 5px;
+				position: relative;
+				border-top:1px dashed #666666;
+			}
+			.order-list-paper-ul > li:first-child {
+				display: block;
+				padding: 5px;
+				position: relative;
+				border-top:0px dashed #666666;
+			}
+			.order-list-paper-ul > li > dl {
+				padding: 0;
+				margin: 0;
+			}
+			.order-list-paper-ul > li > dl > dd {
+				font-size: 14px;
+				color: #666666;
+				font-weight: bold;
+				margin-left: 0px;
+			}
+			.order-list-paper-ul > li > dl > dt {
+				font-size: 12px;
+				color: #666666;
+			}
+			.order-list-paper-ul > li > dl > span {
+				display: block;
+                width: 15px;
+                height: 15px;
+                background-color: #DDE1E7;
+                border-radius: 10px;
+                position: absolute;
+                right: 8px;
+                top: 8px;
+                color: white;
+                font-size: 8px;
+                line-height: 15px;
+                text-align: center;
+			}
+			/*.order-list-paper :after {
+		 		height: 10px;
+                width: 100%;
+		 		content: '';
+		 		position: absolute;
+		 		height: 7.5px;
+		 		background-repeat: repeat-x;
+		 		background-size:15px 15px;
+		 		background-position: left bottom;
+		 		background-image: linear-gradient(135deg,transparent 45%,green 55%,transparent 60%),
+		 		linear-gradient(45deg,transparent 45%,green 55%,transparent 60%);
+		 	}*/
+		 	
+		 	.order-list-paper-ul:after {
+		 		content: '';
+    position: absolute;
+    bottom: ;
+    width: 100%;
+    height: 5px;
 
-	<body>
-		<header class="header_zz">
-			<i class="mui-icon mui-icon-back header_i_back"></i>
-			<div class="header_zz_div">
-				<span>投注单</span>
-			</div>
+    background:
+        linear-gradient(135deg, transparent, transparent 45%, #008000, transparent 55%, transparent 100%),
+        linear-gradient(45deg, transparent, transparent 45%, #008000, transparent 55%, transparent 100%);
+    background-size: 10px 10px;
+    background-repeat: repeat-x, repeat-x;
+		 	}
+			
+		</style>
+	</head>
+
+	<body style="background-color: white;#666666;">
+
+		<header style="width: 100%;height: 36px;color: white;background-color: #DF2214;line-height: 36px;text-align: center;">
+			<span style="position: absolute; left: 8px; line-height: 36px;z-index: 9;" class="mui-icon mui-icon-back"></span> 投注单
 		</header>
 
-		<article>
-			<div class="sub_index_head_message">2018104期投注截止时间：
-				<font color="red">23:59:18</font>
-			</div>
-		</article>
+		<div class="containter">
 
-		<article class="data_body_article">
-			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll order_list_div">
-					<ul class="order_list_ul">
-						<li>
-							<dl>
-								<dt>特码(特码)共<font color="red">1</font>注，共<font color="red">2</font>元</dt>
-								<dd>03</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>特码(特码)共<font color="red">1</font>注，共<font color="red">2</font>元</dt>
-								<dd>03</dd>
-							</dl>
-						</li>
-					</ul>
+			<header style="position: relative;z-index: 9;">
+				<span style="text-align: center;font-size: 12px;display: block; padding: 4px 0px; color: #666666;box-shadow: darkgrey 0px 0px 6px 0px;">2018-113期投注截至时间：<font id="time_remain" color="#E26F6F">06:55:23</font></span>
+				<ul class="ul-btn-select">
+					<li> + 机选一注</li>
+					<li> + 机选五注</li>
+					<li> + 机选十注</li>
+				</ul>
+			</header>
+
+			<article class="order-list-article">
+				<div class="mui-scroll-wrapper" style="margin-top: 116px;height: 600px;height: 400px;">
+					<div class="mui-scroll" style="height: 1000px;">
+
+						<div class="order-list-div" style="position: relative;">
+
+							<div style="height: 10px;width: 80%;border: 1px solid #D1D1D1;
+								margin: auto;border-radius: 30px;position: relative;">
+							 <div style="height: 4px; width: 98%; border: 1px solid #D1D1D1; top: 0; margin: auto; 
+							 	border-radius: 30px; bottom: 0; left: 0; position: absolute; right: 0;">
+							    
+							 </div>
+							
+							</div>
+							
+							<div class="order-list-paper" style="width: 74%; margin: auto; border-left: 1px solid #EBEBEB; 
+								border-right: 1px solid #EBEBEB;border-top: 1px solid #EBEBEB; 
+								box-shadow: 0px 1px 10px 3px #E6E6E6; position: absolute; 
+								left: 0; right: 0; top: 5px;background-color: white;">
+								<ul class="order-list-paper-ul">
+									<li>
+										<dl>
+											<dt>特码（特码）共<font color="red">1</font>注，共<font color="red">2</font>元</dt>
+											<dd>13</dd>
+											<span>✖</span>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>特码（特码）共<font color="red">1</font>注，共<font color="red">2</font>元</dt>
+											<dd>13</dd>
+											<span>✖</span>
+										</dl>
+									</li>
+									
+								</ul>
+							</div>
+							
+								
+								
+
+							</div>
+						</div>
+
+					</div>
 				</div>
-			</div>
-		</article>
+			</article>
 
-		<article class="article_div">
-			<ul class="article_div_ul">
-				<li class="article_div_ul_li_one" style="flex: 1;"><span>机选</span></li>
-				<li style="flex: 2;">单注<input value="2" class="article_div_ul_li_input" />元</li>
-				<li class="article_div_ul_li_three" style="flex: 1;"><span id="sub_span">确定</span></li>
+		</div>
+
+		<div class="bottom-field" style="position: absolute; bottom: 0px; background-color: white;border-top: 1px solid #E5E5E5; width: 100%;z-index: 9;">
+			<ul class="bottom-field-ul">
+				<li><span id="qing-kong" style="border: 1px solid #CD0606; color: #CD0606;padding: 6px 14px; border-radius: 3px; background-color: #FFEFEF; line-height: 48px; margin-left: 10px;">清空</span></li>
+				<li>
+					<span class="order-message" style="display: block;text-align: center;font-size: 12px;">
+					合计&nbsp;&nbsp;<font color="#E26F6F">2.00元</font>
+				    <br />
+				          可用余额<font color="#E26F6F">0元</font>
+					</span>
+				</li>
+				<li style="text-align: right;"><span style="border: 1px solid #CD0606; color: #ffffff;padding: 6px 14px; border-radius: 3px; background-color: #CC0000; line-height: 48px; margin-right: 10px;">投注</span></li>
 			</ul>
-		</article>
+		</div>
 
 	</body>
-	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/mui.min.js"></script>
 	<script>
-		$(function() {
-
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.005
 		});
 	</script>
 
