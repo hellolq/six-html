@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/mui.min.css" />
+	<link rel="stylesheet" href="css/my.css" />
+	<style>
+		.sub_index_head_message {
+			text-align: center;
+			font-size: 14px;
+			padding: 6px;
+			box-shadow: 0px 2px 10px 2px #D5D5D5;
+		}
+		
+		.order_list_div {
+			padding: 18px;
+		}
+		
+		.order_list_ul {
+			display: flex;
+			flex-direction: column;
+			box-shadow:  0px 2px 10px 2px #D5D5D5;
+		}
+		
+		.order_list_ul>li {
+			display: block;
+			flex: 1;
+			font-size: 12px;
+			padding: 8px;
+			background-image: linear-gradient(to right, #ccc 0%, #ccc 50%, transparent 50%);
+            background-size: 8px 1px;
+            background-repeat: repeat-x;
+            background-position: left bottom;
+		}
+		.order_list_ul>li>dl>dd {
+			font-weight: bold;
+		}
+	</style>
+
+	<body>
+		<header class="header_zz">
+			<i class="mui-icon mui-icon-back header_i_back"></i>
+			<div class="header_zz_div">
+				<span>投注单</span>
+			</div>
+		</header>
+
+		<article>
+			<div class="sub_index_head_message">2018104期投注截止时间：
+				<font color="red">23:59:18</font>
+			</div>
+		</article>
+
+		<article class="data_body_article">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll order_list_div">
+					<ul class="order_list_ul">
+						<li>
+							<dl>
+								<dt>特码(特码)共<font color="red">1</font>注，共<font color="red">2</font>元</dt>
+								<dd>03</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>特码(特码)共<font color="red">1</font>注，共<font color="red">2</font>元</dt>
+								<dd>03</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+
+		<article class="article_div">
+			<ul class="article_div_ul">
+				<li class="article_div_ul_li_one" style="flex: 1;"><span>机选</span></li>
+				<li style="flex: 2;">单注<input value="2" class="article_div_ul_li_input" />元</li>
+				<li class="article_div_ul_li_three" style="flex: 1;"><span id="sub_span">确定</span></li>
+			</ul>
+		</article>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/mui.min.js"></script>
+	<script>
+		$(function() {
+
+		});
+	</script>
+
+</html>
